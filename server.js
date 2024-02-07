@@ -15,7 +15,8 @@ app.use(express.static('public')); // Assuming your CSS is in a 'public' folder
 function calculateTotals(schedule) {
   const totalPw = schedule.filter(entry => entry.test && entry.test.toLowerCase() === 'pw').length;
   const totalSo = schedule.filter(entry => entry.test && entry.test.toLowerCase() === 'so').length;
-  return { totalPw, totalSo };
+  const totalMo = schedule.filter(entry => entry.test && entry.test.toLowerCase() === 'mo').length;
+  return { totalPw, totalSo, totalMo };
 }
 
 // Render the index page with a list of classes

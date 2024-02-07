@@ -12,13 +12,13 @@
         "time": "08:55 - 09:40",
         "day": "Maandag",
         "subject": "Wiskunde",
-        "test": ""
+        "test": "pw"
       },
       {
         "time": "10:05 - 10:55",
         "day": "Maandag",
         "subject": "Geschiedenis",
-        "test": ""
+        "test": "pw"
       },
       {
         "time": "10:55 - 11:45",
@@ -42,13 +42,13 @@
         "time": "08:55 - 09:40",
         "day": "Dinsdag",
         "subject": "Wiskunde",
-        "test": ""
+        "test": "mo"
       },
       {
         "time": "10:05 - 10:55",
         "day": "Dinsdag",
         "subject": "Geschiedenis",
-        "test": ""
+        "test": "mo"
       },
       {
         "time": "10:55 - 11:45",
@@ -96,7 +96,7 @@
         "time": "08:05 - 08:55",
         "day": "Donderdag",
         "subject": "Nederlands",
-        "test": "pw"
+        "test": ""
       },
       {
         "time": "08:55 - 09:40",

@@ -14,45 +14,83 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var totalPw = <%= totals.totalPw %>;
-    var totalSo = <%= totals.totalSo %>;
-    totalSo = Math.min(5, totalSo);
+var totalSo = <%= totals.totalSo %>;
+var totalMo = <%= totals.totalMo %>;
 
-    totalPw = Math.min(3, totalPw);
+// Restricting values to specified maximums
+totalSo = Math.min(5, totalSo);
+totalPw = Math.min(3, totalPw);
+totalMo = Math.min(4, totalMo);
 
-    var color;
-    if (totalSo === 1 && totalPw === 0) {
-      color = '#bbdb44';
-    } else if (totalSo === 2 && totalPw === 0) {
-      color = '#f7e379';
-    } else if (totalSo === 3 && totalPw === 0) {
-      color = '#f2a134';
-    } else if (totalSo === 4 && totalPw === 0) {
-      color = '#e51f1f';
-    } else if (totalSo === 5 && totalPw === 0) {
-      color = '#ff0000';
-    } else if (totalSo === 0 && totalPw === 1) {
-      color = '#bbdb44';
-    } else if (totalSo === 0 && totalPw === 2) {
-      color = '#f2a134';
-    } else if (totalSo === 0 && totalPw === 3) {
-      color = '#ff0000';
-    } else if (totalSo === 1 && totalPw === 1) {
-      color = '#f7e379';
-    } else if (totalSo === 2 && totalPw === 1) {
-      color = '#f2a134';
-    } else if (totalSo === 2 && totalPw === 2) {
-      color = '#e51f1f';
-    } else if (totalSo >= 3 && totalPw >= 2) {
-      color = '#ff0000';
-    } else if (totalSo >= 0 && totalPw >= 3) {
-      color = '#ff0000';
-    } else if (totalSo >= 1 && totalPw >= 2) {
-      color = '#ff0000';
-    } else if (totalSo >= 3 && totalPw >= 1) {
-      color = '#ff0000';
-    } else {
-      color = '#44ce1b';
-    }
+var value;
+var color;
+
+if (totalSo === 1 && totalPw === 0) {
+  value = 9.5;
+  color = '#bbdb44';
+} else if (totalSo === 2 && totalPw === 0) {
+  value = 8;
+  color = '#f7e379';
+} else if (totalSo === 3 && totalPw === 0) {
+  value = 5.5;
+  color = '#f2a134';
+} else if (totalSo === 0 && totalPw === 0 && totalMo === 1) {
+  value = 9;
+  color = '#bbdb44';
+} else if (totalSo === 0 && totalPw === 0 && totalMo === 2) {
+  value = 5.5;
+  color = '#f7e379';
+} else if (totalSo === 1 && totalPw === 0 && totalMo === 2) {
+  value = 1;
+  color = '#e51f1f';
+} else if (totalSo === 0 && totalPw === 1 && totalMo === 2) {
+  value = 8;
+  color = '#ff0000';
+} else if (totalSo === 2 && totalPw === 0 && totalMo === 2) {
+} else if (totalSo === 4 && totalPw === 0) {
+  value = 1;
+  color = '#e51f1f';
+} else if (totalSo === 5 && totalPw === 0) {
+  value = 1;
+  color = '#ff0000';
+} else if (totalSo === 0 && totalPw === 1) {
+  value = 8;
+  color = '#bbdb44';
+} else if (totalSo === 0 && totalPw === 2) {
+  value = 5.5;
+  color = '#f2a134';
+} else if (totalSo === 0 && totalPw === 3) {
+  value = 1;
+  color = '#ff0000';
+} else if (totalSo === 1 && totalPw === 1) {
+  value = 8;
+  color = '#f7e379';
+} else if (totalSo === 2 && totalPw === 1) {
+  value = 5.5;
+  color = '#f2a134';
+} else if (totalSo === 2 && totalPw === 2) {
+  value = 1;
+  color = '#e51f1f';
+} else if (totalSo >= 3 && totalPw >= 2) {
+  value = 1;
+  color = '#ff0000';
+} else if (totalSo >= 0 && totalPw >= 3) {
+  value = 1;
+  color = '#ff0000';
+} else if (totalSo >= 1 && totalPw >= 2) {
+  value = 1;
+  color = '#ff0000';
+} else if (totalSo >= 3 && totalPw >= 1) {
+  value = 1;
+  color = '#ff0000';
+} else {
+  value = 10; // Default value when none of the conditions are met
+  color = '#44ce1b';
+}
+var spanElement = document.querySelector('.nummer');
+
+// Set the text content of the span to the calculated value
+spanElement.textContent = value;
     console.log(color)
     document.querySelector(".status") ? document.querySelector(".status").style.color = color : console.error("Element with class 'status' not found");
   });
@@ -75,7 +113,7 @@
     <h1 id="fixedHeader">
       <%= timetable.class %>
       <span class="bi bi-circle-fill status d-inline-block" style="color: white; position: relative;">
-        <span class="nummer" style="position: absolute; top: 0%; left: 50%; transform: translateX(-50%); color: white;">6</span>
+        <span class="nummer" style="position: absolute; top: 0%; left: 50%; transform: translateX(-50%); color: white;"></span>
       </span>
     </h1>
 
