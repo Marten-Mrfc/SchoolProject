@@ -1,0 +1,153 @@
+body.flex-container {
+  display: flex;
+  background-color: #E9ECF5;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #2B2D42; /* Adjust the background color as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-content {
+  flex: 1; /* Take the remaining space */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.sidebar-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #E9ECF5;
+}
+
+.class-list {
+  padding: 0;
+  margin: 0;
+}
+.class-item {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease;
+  color: #E9ECF5;
+  border-radius: 5px;
+}
+.class-item:hover {
+  background-color: #383B56;
+  list-style: none; /* Removes the bullet points */
+}
+
+.selected {
+  background-color: #383B56;
+}
+#fixedHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: -10; /* Adjust the z-index value as needed */
+  text-align: center;
+}
+.table {
+  margin-top: 2vh;
+}
+
+tbody {
+  border-radius: 5px;
+  padding: 5px;
+}
+    /* Basic styling for the dropdown button */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Styling for the dropdown button */
+    .dropdown > div {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Styling for the dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position the menu below the button */
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    /* Animation for showing the dropdown menu */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Styling for dropdown items */
+    .dropdown-menu li {
+      list-style: none;
+    }
+
+    .dropdown-item {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      transition: background-color 0.1s;
+      border-radius: 3px;
+    }
+
+    /* Hover effect for dropdown items */
+    .dropdown-item:hover {
+      background-color: #FF8785;
+    }
+
+    /* Styling for the active dropdown item */
+    .dropdown-item.active {
+      background-color: #FF6663;
+      color: #fff;
+    }
+
+
+    .card-grou {
+      display: flex;
+      justify-content: space-between;
+      margin: -5px; /* Adjust as needed */
+      
+      .card {
+        margin: 10px; /* Adjust as needed */
+        border-radius: 20px;
+        width: 40vw;
+      }
+      .card-text {
+        margin-left: 1vw;
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+      }
+      .card-title {
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+      }
+    }

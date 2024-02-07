@@ -1,0 +1,622 @@
+[
+  {
+    "class": "M2A",
+    "schedule": [
+      {
+        "time": "08:05 - 08:55",
+        "day": "Maandag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Maandag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Maandag",
+        "subject": "Geschiedenis",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Maandag",
+        "subject": "Natuurkunde",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Maandag",
+        "subject": "Informatica",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Dinsdag",
+        "subject": "Engels",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Dinsdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Dinsdag",
+        "subject": "Geschiedenis",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Dinsdag",
+        "subject": "Natuurkunde",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Dinsdag",
+        "subject": "Informatica",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Woensdag",
+        "subject": "Scheikunde",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Woensdag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Woensdag",
+        "subject": "Economie",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Woensdag",
+        "subject": "Aardrijkskunde",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Woensdag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Donderdag",
+        "subject": "Nederlands",
+        "test": "pw"
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Donderdag",
+        "subject": "Kunst",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Donderdag",
+        "subject": "Muziek",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Donderdag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Donderdag",
+        "subject": "Scheikunde",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Vrijdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Vrijdag",
+        "subject": "Duits",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Vrijdag",
+        "subject": "Frans",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Vrijdag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Vrijdag",
+        "subject": "Biologie",
+        "test": ""
+      }
+    ]
+  },
+  {
+    "class": "HV2A",
+    "schedule": [
+      {
+        "time": "08:05 - 08:55",
+        "day": "Maandag",
+        "subject": "Engels",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Maandag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Maandag",
+        "subject": "Scheikunde",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Maandag",
+        "subject": "Maatschappijleer",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Maandag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Dinsdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Dinsdag",
+        "subject": "Aardrijkskunde",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Dinsdag",
+        "subject": "Muziek",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Dinsdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Dinsdag",
+        "subject": "Duits",
+        "test": "so"
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Woensdag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Woensdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Woensdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Woensdag",
+        "subject": "Informatica",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Woensdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Donderdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Donderdag",
+        "subject": "Maatschappijleer",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Donderdag",
+        "subject": "Economie",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Donderdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Donderdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Vrijdag",
+        "subject": "Engels",
+        "test": "so"
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Vrijdag",
+        "subject": "Duits",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Vrijdag",
+        "subject": "Natuurkunde",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Vrijdag",
+        "subject": "Geschiedenis",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Vrijdag",
+        "subject": "Biologie",
+        "test": ""
+      }
+    ]
+  },
+  {
+    "class": "HV2B",
+    "schedule": [
+      {
+        "time": "08:05 - 08:55",
+        "day": "Maandag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Maandag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Maandag",
+        "subject": "Scheikunde",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Maandag",
+        "subject": "Maatschappijleer",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Maandag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Dinsdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Dinsdag",
+        "subject": "Aardrijkskunde",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Dinsdag",
+        "subject": "Muziek",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Dinsdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Dinsdag",
+        "subject": "Duits",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Woensdag",
+        "subject": "Biologie",
+        "test": "pw"
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Woensdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Woensdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Woensdag",
+        "subject": "Informatica",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Woensdag",
+        "subject": "Wiskunde",
+        "test": "so"
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Donderdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Donderdag",
+        "subject": "Maatschappijleer",
+        "test": "so"
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Donderdag",
+        "subject": "Economie",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Donderdag",
+        "subject": "Tekenen",
+        "test": "so"
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Donderdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Vrijdag",
+        "subject": "Engels",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Vrijdag",
+        "subject": "Duits",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Vrijdag",
+        "subject": "Natuurkunde",
+        "test": "so"
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Vrijdag",
+        "subject": "Geschiedenis",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Vrijdag",
+        "subject": "Biologie",
+        "test": ""
+      }
+    ]
+  },
+  {
+    "class": "AG2A",
+    "schedule": [
+      {
+        "time": "08:05 - 08:55",
+        "day": "Maandag",
+        "subject": "Frans",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Maandag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Maandag",
+        "subject": "Scheikunde",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Maandag",
+        "subject": "Economie",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Maandag",
+        "subject": "LO",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Dinsdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Dinsdag",
+        "subject": "Aardrijkskunde",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Dinsdag",
+        "subject": "Muziek",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Dinsdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Dinsdag",
+        "subject": "Duits",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Woensdag",
+        "subject": "Biologie",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Woensdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Woensdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Woensdag",
+        "subject": "Informatica",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Woensdag",
+        "subject": "Wiskunde",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Donderdag",
+        "subject": "Nederlands",
+        "test": ""
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Donderdag",
+        "subject": "Maatschappijleer",
+        "test": "so"
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Donderdag",
+        "subject": "Economie",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Donderdag",
+        "subject": "Tekenen",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Donderdag",
+        "subject": "Gym",
+        "test": ""
+      },
+      {
+        "time": "08:05 - 08:55",
+        "day": "Vrijdag",
+        "subject": "Engels",
+        "test": "pw"
+      },
+      {
+        "time": "08:55 - 09:40",
+        "day": "Vrijdag",
+        "subject": "Duits",
+        "test": "mo"
+      },
+      {
+        "time": "10:05 - 10:55",
+        "day": "Vrijdag",
+        "subject": "Natuurkunde",
+        "test": ""
+      },
+      {
+        "time": "10:55 - 11:45",
+        "day": "Vrijdag",
+        "subject": "Geschiedenis",
+        "test": ""
+      },
+      {
+        "time": "12:10 - 13:00",
+        "day": "Vrijdag",
+        "subject": "Biologie",
+        "test": ""
+      }
+    ]
+  }
+]
