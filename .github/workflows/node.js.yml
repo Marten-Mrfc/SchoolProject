@@ -1,4 +1,6 @@
+name: Node.js Test, Build and Notify
 
+on: [push]
 
 jobs:
   build:
