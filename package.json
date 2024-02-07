@@ -5,16 +5,17 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
     "path": "^0.12.7"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest"
   },
   "name": "schoolproject",
   "description": "This is a school project of me for the Bataafs Lyceum in Hengelo OV Netherlands",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
