@@ -7,6 +7,7 @@ const fs = require('fs');
 // Sample timetable data (you can replace it with the content of your timetable.json)
 const timetables = require('./timetable.json');
 app.use(bodyParser.json());
+const reactions = require('./reactions.json'); // Adjust the path as needed
 
 app.set('view engine', 'ejs');
 app.use(express.static('public')); // Assuming your CSS is in a 'public' folder
@@ -37,7 +38,7 @@ app.get('/', (req, res) => {
 
 // Update timetable route
 app.post('/updateTimetable', (req, res) => {
-  const { class: className, day, time, subject, test } = req.body;
+  const { class: className, day, time, test } = req.body;
 
   // Find the timetable for the given class
   const timetable = timetables.find(t => t.class === className);
@@ -56,12 +57,59 @@ app.post('/updateTimetable', (req, res) => {
     // Save the updated timetable to the JSON file
     fs.writeFileSync('./timetable.json', JSON.stringify(timetables, null, 2));
 
-    res.json({ success: true, message: 'Timetable updated successfully' });
+    // Calculate totals after updating
+    const updatedTotals = calculateTotals(timetable.schedule);
+
+    res.json({ success: true, message: 'Timetable updated successfully', totals: updatedTotals });
   } else {
     res.status(404).json({ error: 'Entry not found in the timetable' });
   }
 });
 
+// Endpoint to get initial totals
+app.get('/getInitialTotals', (req, res) => {
+  // Assuming you want totals for the first timetable entry
+  const initialTotals = calculateTotals(timetables[0].schedule);
+  res.json(initialTotals);
+});
+// Update your server.js file
+
+// Function to get a random comment for a given class
+function getRandomComment(classNumber) {
+  const classComments = reactions.find(entry => entry[classNumber]);
+  if (classComments) {
+    const comments = classComments[classNumber];
+    const randomIndex = Math.floor(Math.random() * comments.length);
+    return comments[randomIndex];
+  } else {
+    return null;
+  }
+}
+
+// Endpoint to get a random comment for a class
+app.get('/getRandomText', (req, res) => {
+  try {
+    const nummerValue = req.query.nummer;
+
+    // Find the item in the reactions array with the matching 'nummer' value
+    const matchingItem = reactions.find(item => Object.keys(item)[0] === nummerValue);
+
+    if (matchingItem) {
+      const randomNumber = Object.keys(matchingItem)[0];
+      const randomTexts = matchingItem[randomNumber];
+
+      // Select a random text from the array
+      const randomTextIndex = Math.floor(Math.random() * randomTexts.length);
+      const randomText = randomTexts[randomTextIndex];
+
+      res.json({ success: true, randomText: randomText.text, nummerValue });
+    } else {
+      res.json({ success: false, error: 'No matching item found for the provided number' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);

@@ -11,91 +11,6 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var totalPw = <%= totals.totalPw %>;
-var totalSo = <%= totals.totalSo %>;
-var totalMo = <%= totals.totalMo %>;
-
-// Restricting values to specified maximums
-totalSo = Math.min(5, totalSo);
-totalPw = Math.min(3, totalPw);
-totalMo = Math.min(4, totalMo);
-
-var value;
-var color;
-
-if (totalSo === 1 && totalPw === 0) {
-  value = 9.5;
-  color = '#bbdb44';
-} else if (totalSo === 2 && totalPw === 0) {
-  value = 8;
-  color = '#f7e379';
-} else if (totalSo === 3 && totalPw === 0) {
-  value = 5.5;
-  color = '#f2a134';
-} else if (totalSo === 0 && totalPw === 0 && totalMo === 1) {
-  value = 9;
-  color = '#bbdb44';
-} else if (totalSo === 0 && totalPw === 0 && totalMo === 2) {
-  value = 5.5;
-  color = '#f7e379';
-} else if (totalSo === 1 && totalPw === 0 && totalMo === 2) {
-  value = 1;
-  color = '#e51f1f';
-} else if (totalSo === 0 && totalPw === 1 && totalMo === 2) {
-  value = 8;
-  color = '#ff0000';
-} else if (totalSo === 2 && totalPw === 0 && totalMo === 2) {
-} else if (totalSo === 4 && totalPw === 0) {
-  value = 1;
-  color = '#e51f1f';
-} else if (totalSo === 5 && totalPw === 0) {
-  value = 1;
-  color = '#ff0000';
-} else if (totalSo === 0 && totalPw === 1) {
-  value = 8;
-  color = '#bbdb44';
-} else if (totalSo === 0 && totalPw === 2) {
-  value = 5.5;
-  color = '#f2a134';
-} else if (totalSo === 0 && totalPw === 3) {
-  value = 1;
-  color = '#ff0000';
-} else if (totalSo === 1 && totalPw === 1) {
-  value = 8;
-  color = '#f7e379';
-} else if (totalSo === 2 && totalPw === 1) {
-  value = 5.5;
-  color = '#f2a134';
-} else if (totalSo === 2 && totalPw === 2) {
-  value = 1;
-  color = '#e51f1f';
-} else if (totalSo >= 3 && totalPw >= 2) {
-  value = 1;
-  color = '#ff0000';
-} else if (totalSo >= 0 && totalPw >= 3) {
-  value = 1;
-  color = '#ff0000';
-} else if (totalSo >= 1 && totalPw >= 2) {
-  value = 1;
-  color = '#ff0000';
-} else if (totalSo >= 3 && totalPw >= 1) {
-  value = 1;
-  color = '#ff0000';
-} else {
-  value = 10; // Default value when none of the conditions are met
-  color = '#44ce1b';
-}
-var spanElement = document.querySelector('.nummer');
-
-// Set the text content of the span to the calculated value
-spanElement.textContent = value;
-    console.log(color)
-    document.querySelector(".status") ? document.querySelector(".status").style.color = color : console.error("Element with class 'status' not found");
-  });
-</script>
-
 <body class="flex-container">
 
   <aside class="sidebar">
@@ -113,7 +28,7 @@ spanElement.textContent = value;
     <h1 id="fixedHeader">
       <%= timetable.class %>
       <span class="bi bi-circle-fill status d-inline-block" style="color: white; position: relative;">
-        <span class="nummer" style="position: absolute; top: 0%; left: 50%; transform: translateX(-50%); color: white;"></span>
+        <span class="nummer" style="position: absolute; top: 10%; left: 50%; transform: translateX(-50%); color: white; font-size: 30px;"></span>
       </span>
     </h1>
 
@@ -166,7 +81,7 @@ spanElement.textContent = value;
         <h3 class="card-header">
           Reactie van leerling
         </h3> 
-        <p class="card-text">"Dit zijn echt veel toetsen"</p>       
+        <p class="card-text reaction">Laden...</p>       
       </div>
       <div class="card">
         <h3 class="card-header">
@@ -187,15 +102,110 @@ spanElement.textContent = value;
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
     </script>
-    <script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Fetch initial totals from the server
+  fetch('/getInitialTotals')
+    .then(response => response.json())
+    .then(initialTotals => {
+      // Call calculateAndDisplayValues with the initial totals
+      calculateAndDisplayValues(initialTotals);
+      getRandomComment();
+    })
+    .catch(error => {
+      console.error('Error fetching initial totals:', error);
+    });
+});
+async function getRandomComment() {
+  try {
+    // Assuming you want to include the value of '.nummer' in the request
+    const spanElement = document.querySelector('.nummer');
+    const nummerValue = spanElement.textContent; // or spanElement.value, depending on the element type
+
+    const response = await fetch(`/getRandomText?nummer=${nummerValue}`);
+    const data = await response.json();
+
+    if (data.success) {
+      var reaction = document.querySelector('.reaction');
+      reaction.textContent = `"${data.randomText}"` 
+    } else {
+      console.error('Error:', data.error);
+    }
+  } catch (error) {
+    console.error('Fetch Error:', error);
+  }
+};
+
+// Call the function with the desired class number (replace 'selectedClass' with your actual variable)
+  // Define the calculateAndDisplayValues function
+  function calculateAndDisplayValues(initialTotals) {
+    var totalPw = initialTotals.totalPw;
+    var totalSo = initialTotals.totalSo;
+    var totalMo = initialTotals.totalMo;
+
+    <% for (const key in totals) { %>
+      console.log("<%= key %>: <%= totals[key] %>");
+    <% } %>
+
+    // Restricting values to specified maximums
+    totalSo === Math.min(5, totalSo);
+    totalPw === Math.min(3, totalPw);
+    totalMo === Math.min(4, totalMo);
+
+    // Calculate value based on amounts of tests
+    var value, color;
+
+    if (totalSo === 0 && totalPw === 0 && totalMo === 0) {
+      value = 10; // Default value when no tests are taken
+      color = '#44ce1b';
+    } else {
+      value = 10;
+
+      if (totalMo !== 0) value -= 1 * totalMo;
+      if (totalSo !== 0) value -= 2 * totalSo;
+      if (totalPw !== 0) value -= 3 * totalPw;
+      if (totalSo === 5 || totalPw === 3 || totalMo === 4) {
+        value = 1;
+      }
+
+      // Ensure the value is within the range [1, 10]
+      value = Math.max(1, Math.min(10, value));
+
+      // Adjust colors based on the calculated value
+      if (value >= 7) {
+        color = '#bbdb44';
+      } else if (value >= 4.5) {
+        color = '#f7e379';
+      } else if (value >= 2) {
+        color = '#f2a134';
+      } else if (value >= 1) {
+        color = '#ff0000';
+      } else {
+        color = '#e51f1f';
+      }
+    }
+
+    var spanElement = document.querySelector('.nummer');
+    // Set the text content of the span to the calculated value
+    spanElement.textContent = value;
+
+    console.log(color);
+
+    var statusElement = document.querySelector(".status");
+    if (statusElement) {
+      statusElement.style.color = color;
+    } else {
+      console.error("Element with class 'status' not found");
+    }
+  }
+
+
+
       function switchClass(selectedClass) {
         window.location.href = '/?klas=' + encodeURIComponent(selectedClass);
       }
-
-      function updateTest(selectedTest, index) {
-        console.log(`Updated test for index ${index} to: ${selectedTest}`);
-      }
       function updateTest(day, time, test, id) {
+        
   const className = '<%= timetable.class %>';
   let updatedTest = test;
 
@@ -244,7 +254,17 @@ spanElement.textContent = value;
   .catch(error => {
     console.error('Error during fetch:', error);
   });
-}
+  fetch('/getInitialTotals')
+    .then(response => response.json())
+    .then(initialTotals => {
+      // Call calculateAndDisplayValues with the initial totals
+      calculateAndDisplayValues(initialTotals);
+      getRandomComment();
+    })
+    .catch(error => {
+      console.error('Error fetching initial totals:', error);
+    });
+  }
     </script>
 </body>
 

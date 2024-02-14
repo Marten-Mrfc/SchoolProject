@@ -12,13 +12,13 @@
         "time": "08:55 - 09:40",
         "day": "Maandag",
         "subject": "Wiskunde",
-        "test": "pw"
+        "test": ""
       },
       {
         "time": "10:05 - 10:55",
         "day": "Maandag",
         "subject": "Geschiedenis",
-        "test": "pw"
+        "test": ""
       },
       {
         "time": "10:55 - 11:45",
@@ -42,13 +42,13 @@
         "time": "08:55 - 09:40",
         "day": "Dinsdag",
         "subject": "Wiskunde",
-        "test": "mo"
+        "test": ""
       },
       {
         "time": "10:05 - 10:55",
         "day": "Dinsdag",
         "subject": "Geschiedenis",
-        "test": "mo"
+        "test": ""
       },
       {
         "time": "10:55 - 11:45",
@@ -215,7 +215,7 @@
         "time": "12:10 - 13:00",
         "day": "Dinsdag",
         "subject": "Duits",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "08:05 - 08:55",
@@ -281,7 +281,7 @@
         "time": "08:05 - 08:55",
         "day": "Vrijdag",
         "subject": "Engels",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "08:55 - 09:40",
@@ -567,7 +567,7 @@
         "time": "08:55 - 09:40",
         "day": "Donderdag",
         "subject": "Maatschappijleer",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "10:05 - 10:55",
@@ -591,7 +591,7 @@
         "time": "08:05 - 08:55",
         "day": "Vrijdag",
         "subject": "Engels",
-        "test": "pw"
+        "test": ""
       },
       {
         "time": "08:55 - 09:40",

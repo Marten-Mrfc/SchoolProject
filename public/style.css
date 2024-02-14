@@ -16,6 +16,7 @@ body.flex-container {
   flex: 1; /* Take the remaining space */
   padding: 20px;
   box-sizing: border-box;
+  margin-right: 4vw;
 }
 
 .sidebar-title {
