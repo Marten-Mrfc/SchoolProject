@@ -140,15 +140,17 @@ tbody {
       .card {
         margin: 10px; /* Adjust as needed */
         border-radius: 20px;
-        width: 40vw;
+        width: 80vw;
       }
       .card-text {
         margin-left: 1vw;
         padding-bottom: 2vh;
         padding-top: 2vh;
+        text-align: center;
       }
-      .card-title {
+      .card-header {
         padding-bottom: 2vh;
         padding-top: 2vh;
+        text-align: center;
       }
     }
