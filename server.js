@@ -68,24 +68,17 @@ app.post('/updateTimetable', (req, res) => {
 
 // Endpoint to get initial totals
 app.get('/getInitialTotals', (req, res) => {
-  // Assuming you want totals for the first timetable entry
-  const initialTotals = calculateTotals(timetables[0].schedule);
+  const requestedClass = req.query.klas.toUpperCase(); // Convert to uppercase
+  // Find the timetable based on the requested class
+  const timetable = timetables.find(t => t.class === requestedClass);
+
+  if (!timetable) {
+    return res.status(404).json({ error: 'Timetable not found for the specified class' });
+  }
+
+  const initialTotals = calculateTotals(timetable.schedule);
   res.json(initialTotals);
 });
-// Update your server.js file
-
-// Function to get a random comment for a given class
-function getRandomComment(classNumber) {
-  const classComments = reactions.find(entry => entry[classNumber]);
-  if (classComments) {
-    const comments = classComments[classNumber];
-    const randomIndex = Math.floor(Math.random() * comments.length);
-    return comments[randomIndex];
-  } else {
-    return null;
-  }
-}
-
 // Endpoint to get a random comment for a class
 app.get('/getRandomText', (req, res) => {
   try {

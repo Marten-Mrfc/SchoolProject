@@ -103,9 +103,16 @@
       })
     </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+function getQueryStringValue(key) {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get(key);
+}
+document.addEventListener('DOMContentLoaded', function () {
   // Fetch initial totals from the server
-  fetch('/getInitialTotals')
+  const currentKlas = getQueryStringValue('klas');
+  console.log(currentKlas);
+  fetch(`/getInitialTotals?klas=${currentKlas}`)
     .then(response => response.json())
     .then(initialTotals => {
       // Call calculateAndDisplayValues with the initial totals
@@ -142,20 +149,18 @@ async function getRandomComment() {
     var totalPw = initialTotals.totalPw;
     var totalSo = initialTotals.totalSo;
     var totalMo = initialTotals.totalMo;
-
-    <% for (const key in totals) { %>
-      console.log("<%= key %>: <%= totals[key] %>");
-    <% } %>
+    console.log(totalPw, totalSo, totalMo);
 
     // Restricting values to specified maximums
     totalSo === Math.min(5, totalSo);
     totalPw === Math.min(3, totalPw);
     totalMo === Math.min(4, totalMo);
-
+    console.log(totalPw, totalSo, totalMo);
     // Calculate value based on amounts of tests
     var value, color;
 
     if (totalSo === 0 && totalPw === 0 && totalMo === 0) {
+      console.log("Geen toetsen");
       value = 10; // Default value when no tests are taken
       color = '#44ce1b';
     } else {
@@ -184,7 +189,7 @@ async function getRandomComment() {
         color = '#e51f1f';
       }
     }
-
+    console.log(value);
     var spanElement = document.querySelector('.nummer');
     // Set the text content of the span to the calculated value
     spanElement.textContent = value;
@@ -254,7 +259,9 @@ async function getRandomComment() {
   .catch(error => {
     console.error('Error during fetch:', error);
   });
-  fetch('/getInitialTotals')
+  const currentKlas = getQueryStringValue('klas');
+  console.log(currentKlas);
+  fetch(`/getInitialTotals?klas=${currentKlas}`)
     .then(response => response.json())
     .then(initialTotals => {
       // Call calculateAndDisplayValues with the initial totals
