@@ -1,3 +1,12 @@
+const toggleTheme = () => {
+    const root = document.documentElement;
+    const currentTheme = root.getAttribute('data-theme');
+    root.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+};
+  
+  // Attach this function to a button click or similar event
+document.querySelector('#themeToggle').addEventListener('click', toggleTheme);
+
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
