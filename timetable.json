@@ -376,7 +376,7 @@
         "time": "08:05 - 08:55",
         "day": "Woensdag",
         "subject": "Biologie",
-        "test": "pw"
+        "test": ""
       },
       {
         "time": "08:55 - 09:40",
@@ -400,7 +400,7 @@
         "time": "12:10 - 13:00",
         "day": "Woensdag",
         "subject": "Wiskunde",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "08:05 - 08:55",
@@ -412,7 +412,7 @@
         "time": "08:55 - 09:40",
         "day": "Donderdag",
         "subject": "Maatschappijleer",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "10:05 - 10:55",
@@ -424,7 +424,7 @@
         "time": "10:55 - 11:45",
         "day": "Donderdag",
         "subject": "Tekenen",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "12:10 - 13:00",
@@ -448,7 +448,7 @@
         "time": "10:05 - 10:55",
         "day": "Vrijdag",
         "subject": "Natuurkunde",
-        "test": "so"
+        "test": ""
       },
       {
         "time": "10:55 - 11:45",
@@ -597,7 +597,7 @@
         "time": "08:55 - 09:40",
         "day": "Vrijdag",
         "subject": "Duits",
-        "test": "mo"
+        "test": ""
       },
       {
         "time": "10:05 - 10:55",
