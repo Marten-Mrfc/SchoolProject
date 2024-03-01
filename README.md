@@ -2,7 +2,7 @@
 
 Dit is een schoolproject voor het Bataafs Lyceum in Hengelo, OV, Nederland.
 
-## Hoe voer je deze website uit?
+# Hoe voer je deze website uit?
 
 1. Klik op de groene "code" knop bovenaan de website en download het als een zip-bestand.
 2. Pak het zip-bestand uit.
