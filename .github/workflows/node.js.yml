@@ -1,4 +1,4 @@
-name: Node.js Test, Build and Notify
+name: Node.js Update
 
 on: [push]
 
@@ -10,10 +10,6 @@ jobs:
         node: [ 14, 16, 18 ]
     name: Node ${{ matrix.node }} sample
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test --passWithNoTests
+      - name: Autoupdater for dependencies (Node JS)
+        uses: siarheidudko/autoupdater@v3
+            
