@@ -1,15 +1,16 @@
 # SchoolProject
-This is a school project of me for the Bataafs Lyceum in Hengelo OV Netherlands
 
-# Hoe zet ik deze website aan?
+Dit is een schoolproject voor het Bataafs Lyceum in Hengelo, OV, Nederland.
 
-1. Druk op de groene code knop en download als zip bestand
-2. Pak het zip bestand uit
-3. Zorg dat je een programma genaamd nodejs hebt geïnstalleerd op de laptop/computer dit kan makelijk via de Microsoft Store.
-4. Open het programma `node.js command prompt` dit zou een zwart wit menuutje moeten open dat ookwel op een console lijkt
-5. Het zip bestand is hopelijk uitgepakt in `downloads` folder
-6. Nu open de command prompt en voer het commando `cd C:\Users\Marten\Downloads\SchoolProject-main\SchoolProject-main` uit en druk `enter`
-7. De tekst zou nu `C:\Users\Marten\OneDrive - OSG Hengelo\M2a\MasterClass\eigen project\SchoolProject>` moeten zijn
-8. Voer het command `npm start` en het programma zou moeten starten.
-9. Open google(of een andere browser) en voer `http://localhost:3000` en open de site
-10. Voer de klasnaam `m2a` in en de website werkt 
+## Hoe voer je deze website uit?
+
+1. Klik op de groene "code" knop bovenaan de website en download het als een zip-bestand.
+2. Pak het zip-bestand uit.
+3. Zorg ervoor dat je Node.js geïnstalleerd hebt op je computer. Je kunt het eenvoudig installeren vanuit de Microsoft Store.
+4. Open de "Node.js Command Prompt", dit opent een zwart-wit console-achtig menu.
+5. Hopelijk is het zip-bestand uitgepakt in de "Downloads" map. Open die map en vervolgens de "SchoolProject-main" map erin.
+6. Klik nu op de adresbalk bovenaan, die iets zou moeten zeggen als "Downloads > SchoolProject-main > SchoolProject-main". Kopieer alles binnen die adresbalk.
+7. Open de command prompt en voer het commando `cd ` gevolgd door de gekopieerde tekst in, druk dan op `enter`.
+8. Voer het commando `npm start` uit en het programma zou moeten starten.
+9. Open je favoriete browser (bijv. Google Chrome) en voer `http://localhost:3000` in om toegang te krijgen tot de website.
+10. Voer de klasnaam `m2a` in en de website zou correct moeten werken.
